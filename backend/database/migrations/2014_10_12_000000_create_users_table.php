@@ -17,6 +17,15 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('is_trainer')->default(false);
+            $table->text('description')->nullable();
+
+            $table->string('telegram')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('vk')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('avatar')->nullable();
+
             $table->rememberToken();
             $table->timestamps();
         });
